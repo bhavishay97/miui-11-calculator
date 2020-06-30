@@ -1,0 +1,82 @@
+body {
+    background: #282828;
+}
+
+.calculator-base {
+    width: 320px;
+    height: 520px;
+    background: black;
+    margin: 15px auto;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.result {
+    height: 120px;
+}
+
+.history {
+    text-align: right;
+    height: 20px;
+    margin: 0 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    color: #919191;
+    font-family: 'Lato', sans-serif;
+}
+
+.output {
+    text-align: right;
+    height: 60px;
+    margin: 10px 20px;
+    font-size: 30px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.keypad {
+    height: 400px;
+}
+
+hr {
+    margin: 0 20px;
+    border: 0.5px solid lightgray;
+}
+
+.operator, .number, .empty {
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+    float: left;
+    border-width: 0px;
+    background: black;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+.operator {
+    color: #FF6C21;
+}
+
+.equal-to {
+    border-radius: 50px;
+    background: #FF6C21;
+    color: white;
+}
+
+.operator, .number {
+    cursor: pointer;
+}
+
+.operator:active, .number:active {
+    font-size: 18px;
+}
+
+.operator:focus, .number:focus, .empty:focus {
+    outline: 0px;
+}
+
+.number {
+    font-family: 'Lato', sans-serif;
+}
