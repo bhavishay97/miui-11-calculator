@@ -80,3 +80,26 @@ hr {
 .number {
     font-family: 'Lato', sans-serif;
 }
+
+.theme {
+    display: flex;
+    justify-content: center;
+}
+
+.dark, .light {
+    padding: 10px;
+    margin: 20px 40px;
+    border-radius: 5px;
+}
+
+.dark:focus, .light:focus {
+    outline: 0;
+}
+
+.dark {
+    background: steelblue;
+}
+
+.light {
+    background: white;
+}

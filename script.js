@@ -77,3 +77,50 @@ function getFormattedValue(num) {
 function reverseNumberFormat(num) {
   return Number(num.replace(/,/g, ''));
 }
+
+const body = document.body;
+const calculatorBase = document.querySelector('.calculator-base');
+const darkBtn = document.querySelector('.dark');
+const lightBtn = document.querySelector('.light');
+const output = document.querySelector('.output-value');
+const empty = document.querySelectorAll('.empty');
+
+function setLightMode() {
+  body.style.background = 'lightslategray';
+  calculatorBase.style.background = 'white';
+  calculatorBase.style.border = '2px solid black';
+  output.style.color = 'black';
+  lightBtn.style.background = 'steelblue';
+  darkBtn.style.background = 'white';
+
+  for (let i = 0; i < numbers.length; i++) {
+    numbers[i].style.background = 'white';
+    numbers[i].style.color = 'black';
+  }
+
+  for (let i = 0; i < operators.length - 1; i++)
+    operators[i].style.background = 'white';
+
+  for (let i = 0; i < empty.length; i++) empty[i].style.background = 'white';
+}
+
+function setDarkMode() {
+  body.style.background = '#282828';
+  calculatorBase.style.background = 'black';
+  calculatorBase.style.border = '2px solid white';
+  output.style.color = 'white';
+  lightBtn.style.background = 'white';
+  darkBtn.style.background = 'steelblue';
+
+  for (let i = 0; i < numbers.length; i++) {
+    numbers[i].style.background = 'black';
+    numbers[i].style.color = 'white';
+  }
+  for (let i = 0; i < operators.length - 1; i++)
+    operators[i].style.background = 'black';
+
+  for (let i = 0; i < empty.length; i++) empty[i].style.background = 'black';
+}
+
+lightBtn.addEventListener('click', setLightMode);
+darkBtn.addEventListener('click', setDarkMode);
